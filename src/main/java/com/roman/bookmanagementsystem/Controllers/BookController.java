@@ -15,13 +15,13 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("book")
+@RequestMapping("books")
 @RequiredArgsConstructor
 public class BookController {
     @Autowired
     private final BookServiceImpl bookServiceImpl;
 
-    @GetMapping("/list")
+    @GetMapping("/")
     public List<Book> getAllBooks() {
         return bookServiceImpl.getAllBooks();
     }
